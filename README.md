@@ -6,7 +6,7 @@ Demo application to show most popular news feeds on New York Times.
 * Details  are shown on Detail Screen while tapping forward button on each article. 
 * Navigation drawer to  navigate screens. 
 * Following API is used for loading data in the app,
-http://api.nytimes.com/svc/mostpopular/v2/viewed/{section}/{period}.json?api-key='sample-key' To test this API, 
+http://api.nytimes.com/svc/mostpopular/v2/viewed/{section}/{period}.json?api-key='sample-key'.
 
 
 ### Architecture:
