@@ -7,7 +7,7 @@ Demo application to show most popular news feeds on New York Times.
 * Navigation drawer to  navigate screens. 
 * Following API is used for loading data in the app,
 http://api.nytimes.com/svc/mostpopular/v2/viewed/{section}/{period}.json?api-key='sample-key' To test this API, 
-* 1,7, and 30 days period is used for testing the URL
+
 
 ### Architecture:
 Project is developed in kotlin programming  language.Architecture used in project is MVVM with coroutine Flow api .
