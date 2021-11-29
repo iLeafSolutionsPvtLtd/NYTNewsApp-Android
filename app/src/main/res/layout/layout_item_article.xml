@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="article"
+            type="com.demo.newyorktimesarticle.data.model.ResultsItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cl_articleView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="@{article.title}"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ivRightArrow"
+        app:layout_constraintStart_toEndOf="@+id/ivThumbnail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:text="@{article.byline}"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/ivRightArrow"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivRightArrow"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+        app:layout_constraintTop_toTopOf="@+id/tvDate"
+        app:layout_constraintEnd_toStartOf="@+id/tvDate"
+        app:srcCompat="@drawable/ic_baseline_calendar_today" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:textSize="12sp"
+        android:text="@{article.publishedDate}"
+        app:layout_constraintEnd_toStartOf="@+id/ivRightArrow"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
