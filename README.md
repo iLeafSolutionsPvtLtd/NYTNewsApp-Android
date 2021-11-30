@@ -28,6 +28,12 @@ Project is developed in kotlin programming  language.Architecture used in projec
 * After the gradle sync complete, connect a physical device or use Android emulator. 
 * Run the app by clicking on the play button on top bar, or by pressing ctrl+R buttons.
 
+### Running The Tests 
+
+Follow the steps to get test case reports:
+* Move to test packages in Android Studio (Java test packages)
+* Select the package by right clicking, select more run option then select 'run Tests in package with coverage'
+* Test results will be shown after the executions are finished.
 
 # MIT License
 
