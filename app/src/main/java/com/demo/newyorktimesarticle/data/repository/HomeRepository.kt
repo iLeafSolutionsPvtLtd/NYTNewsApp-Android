@@ -12,11 +12,11 @@ import javax.inject.Inject
 
 class HomeRepository @Inject constructor(private val apiInterface: ApiInterface) {
 
-    suspend fun getMostViewedArticles(period: Int, key: String): Flow<State<ArticleResponse>> {
+    fun getMostViewedArticles(period: Int, key: String): Flow<State<ArticleResponse>> {
         return flow {
             emit(State.Loading("Loading"))
             val response: Response<ArticleResponse> =
-                apiInterface.getMostViewedArticles(period = period, key = key)
+                apiInterface.getMostViewedArticles(period, key)
             if (response.isSuccessful) {
                 response.body()?.let { it ->
                     emit(State.Success<ArticleResponse>(it))
