@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
 
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.response.collect {
+                viewModel.response.observe(viewLifecycleOwner) {
                     when (it) {
                         is State.Failed -> {
                             binding.pbLoading.visibility = View.GONE
