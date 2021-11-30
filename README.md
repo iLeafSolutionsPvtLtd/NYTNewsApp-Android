@@ -2,7 +2,7 @@
 
 Demo application to show most popular news feeds on New York Times.
 
-* List of articles of articles are shown in home screen.
+* List of articles are shown in home screen.
 * Details  are shown on Detail Screen while tapping forward button on each article. 
 * Navigation drawer to  navigate screens. 
 * Following API is used for loading data in the app,
